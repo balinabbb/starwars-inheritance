@@ -50,15 +50,23 @@
     <Compile Include="ForceUser.cs" />
     <Compile Include="Sith.cs" />
     <Compile Include="Warrior.cs" />
+    <Compile Include="Warriors\DarthSidius.cs" />
+    <Compile Include="Warriors\DarthVader.cs" />
+    <Compile Include="Warriors\BobaFett.cs" />
+    <Compile Include="Warriors\HanSolo.cs" />
+    <Compile Include="Warriors\Jabba.cs" />
+    <Compile Include="Warriors\DarthMaul.cs" />
     <Compile Include="Warriors\JarJar.cs" />
     <Compile Include="Jedi.cs" />
+    <Compile Include="Warriors\LukeSkywalker.cs" />
+    <Compile Include="Warriors\MaceWindu.cs" />
+    <Compile Include="Warriors\ObiWanKenobi.cs" />
+    <Compile Include="Warriors\Yoda.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="warriors.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Warriors\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

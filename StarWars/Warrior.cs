@@ -18,7 +18,26 @@ namespace StarWars
             var power = int.Parse(data[1]);
             switch (name)
             {
-                //TODO további warrior példányosítások itt.
+                case "Boba Fett":
+                    return new BobaFett(power);
+                case "Darth Maul":
+                    return new DarthMaul(power);
+                case "Darth Sidius":
+                    return new DarthSidius(power);
+                case "Darth Vader":
+                    return new DarthVader(power);
+                case "Han Solo":
+                    return new HanSolo(power);
+                case "Jabba":
+                    return new Jabba(power);
+                case "Luke Skywalker":
+                    return new LukeSkywalker(power);
+                case "Mace Windu":
+                    return new MaceWindu(power);
+                case "Obi Wan Kenobi":
+                    return new ObiWanKenobi(power);
+                case "Yoda":
+                    return new Yoda(power);
                 case "Jar Jar":
                     return new JarJar(power);
             }
