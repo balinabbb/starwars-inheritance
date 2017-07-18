@@ -42,26 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleSimulator.cs" />
+    <Compile Include="Sides\LinearWarriorSource.cs" />
+    <Compile Include="Simulator.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Side.cs" />
-    <Compile Include="ForceUser.cs" />
-    <Compile Include="Sith.cs" />
-    <Compile Include="Warrior.cs" />
-    <Compile Include="Warriors\DarthSidius.cs" />
-    <Compile Include="Warriors\DarthVader.cs" />
-    <Compile Include="Warriors\BobaFett.cs" />
-    <Compile Include="Warriors\HanSolo.cs" />
-    <Compile Include="Warriors\Jabba.cs" />
-    <Compile Include="Warriors\DarthMaul.cs" />
-    <Compile Include="Warriors\JarJar.cs" />
-    <Compile Include="Jedi.cs" />
-    <Compile Include="Warriors\LukeSkywalker.cs" />
-    <Compile Include="Warriors\MaceWindu.cs" />
-    <Compile Include="Warriors\ObiWanKenobi.cs" />
-    <Compile Include="Warriors\Yoda.cs" />
+    <Compile Include="Sides\IWarriorSource.cs" />
+    <Compile Include="Sides\Side.cs" />
+    <Compile Include="Warriors\ForceUser.cs" />
+    <Compile Include="Warriors\Sith.cs" />
+    <Compile Include="Warriors\Warrior.cs" />
+    <Compile Include="Warriors\Implementations\DarthSidius.cs" />
+    <Compile Include="Warriors\Implementations\DarthVader.cs" />
+    <Compile Include="Warriors\Implementations\BobaFett.cs" />
+    <Compile Include="Warriors\Implementations\HanSolo.cs" />
+    <Compile Include="Warriors\Implementations\Jabba.cs" />
+    <Compile Include="Warriors\Implementations\DarthMaul.cs" />
+    <Compile Include="Warriors\Implementations\JarJar.cs" />
+    <Compile Include="Warriors\Jedi.cs" />
+    <Compile Include="Warriors\Implementations\LukeSkywalker.cs" />
+    <Compile Include="Warriors\Implementations\MaceWindu.cs" />
+    <Compile Include="Warriors\Implementations\ObiWanKenobi.cs" />
+    <Compile Include="Warriors\Implementations\Yoda.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

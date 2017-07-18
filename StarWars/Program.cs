@@ -23,7 +23,7 @@ namespace StarWars
                 {
                     case "1":
                         var warriors = FileHandler.ReadWarriors();
-                        var simulator = new BattleSimulator(warriors);
+                        var simulator = new Simulator(warriors);
                         var winner = simulator.RunSimulation();
                         Console.WriteLine("Csata eredménye:");
                         if (winner == null)

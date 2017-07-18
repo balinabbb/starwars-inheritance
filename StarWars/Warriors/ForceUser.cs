@@ -6,11 +6,10 @@
         {
         }
 
-        public override bool IsForceUser { get; } = true;
-        public override bool IsStrongerThan(BattleSimulator simulator, Warrior other)
+        public override bool IsStrongerThan(Warrior other)
         {
             if (other is ForceUser)
-                return base.IsStrongerThan(simulator, other);
+                return base.IsStrongerThan(other);
             return Power + 2 > other.Power;
         }
     }

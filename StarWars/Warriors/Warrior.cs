@@ -41,32 +41,31 @@ namespace StarWars
                 case "Jar Jar":
                     return new JarJar(power);
             }
-            return null;
+            throw new NotImplementedException();
         }
 
         public int Power { get; protected set; }
-        public virtual string Name { get; }
         public virtual bool IsLightSide { get; }
-        public virtual bool IsForceUser { get; }
+        public abstract string Name { get; }
 
         protected Warrior(int power)
         {
             Power = power;
         }
 
-        public abstract void OnJoinBattle(BattleSimulator simulator);
-        public abstract void OnLeaveBattle(BattleSimulator simulator);
-        public abstract void PreCombatEffect(BattleSimulator simulator);
-        public abstract void PostCombatEffect(BattleSimulator simulator);
-        public virtual void DecreasePower(BattleSimulator simulator, int power)
+        public abstract void OnJoinBattle();
+        public abstract void OnLeaveBattle();
+        public abstract void PreCombatEffect();
+        public abstract void PostCombatEffect();
+        public virtual void DecreasePower(int power)
         {
             Power -= power;
         }
 
-        public virtual bool IsStrongerThan(BattleSimulator simulator, Warrior other)
+        public virtual bool IsStrongerThan(Warrior other)
         {
-            var side = IsLightSide ? simulator.LightSide : simulator.DarkSide;
-            var otherSide = side == simulator.LightSide ? simulator.DarkSide : simulator.LightSide;
+            var side = IsLightSide ? Simulator.Instance.LightSide : Simulator.Instance.DarkSide;
+            var otherSide = side == Simulator.Instance.LightSide ? Simulator.Instance.DarkSide : Simulator.Instance.LightSide;
             var ownPower = (1.0 + (side.Morale / 100.0)) * Power;
             var otherPower = (1.0 + (otherSide.Morale / 100.0)) * other.Power;
             Console.WriteLine($"{Power} erő összehasonlítása {side.Morale} morállal ({ownPower}), ellenfél: {other.Power} erő {otherSide.Morale} morállal ({otherPower})");

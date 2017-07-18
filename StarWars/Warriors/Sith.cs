@@ -6,9 +6,9 @@
         {
         }
 
-        public override void OnJoinBattle(BattleSimulator simulator)
+        public override void OnJoinBattle()
         {
-            simulator.LightSide.Morale -= 5;
+            Simulator.Instance.LightSide.Morale -= 5;
         }
     }
 }

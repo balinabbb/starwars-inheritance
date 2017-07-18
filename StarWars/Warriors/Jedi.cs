@@ -6,9 +6,9 @@
         {
         }
 
-        public override void OnLeaveBattle(BattleSimulator simulator)
+        public override void OnLeaveBattle()
         {
-            simulator.LightSide.Morale += 5;
+            Simulator.Instance.LightSide.Morale += 5;
         }
     }
 }
